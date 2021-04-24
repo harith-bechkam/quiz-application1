@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+
+	<mat-toolbar>
+		<span>you can also logout by clicking this button:</span>
+
+		<button [matMenuTriggerFor]="menu">Hi, {{Username}}</button>
+		<mat-menu #menu="matMenu">
+			<a mat-menu-item href="javascript:void(0);" 
+      (click)="logout()">
+				<mat-icon>power_settings_new</mat-icon>Logout
+			</a>
+		</mat-menu>
+	</mat-toolbar>
+
+	<div class="app-content">
+		<router-outlet></router-outlet>
+	</div>
+
+
+</mat-sidenav-container>
+
+
+
